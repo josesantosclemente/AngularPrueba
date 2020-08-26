@@ -1,0 +1,51 @@
+<h1>Busca</h1>
+<div class="row">
+  <div class="col-lg-6">
+    <input type="text"  [(ngModel)]="name" class="form-control" style="width: 100%;">
+  </div>
+  <div class="col-lg-6">
+    <button (click)="realizarConsultaCriterio()" class="btn btn-success">Buscar</button>
+  </div>
+</div>
+<br>
+<br>
+    <div class="row">
+      
+       
+            <table class="table no-margin" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th class="text-warning">Nombre</th>
+                  <th>name</th> 
+                  <th>birth_year</th>
+                  <th>eye_color</th>
+                  <th>gpersonaje.ender</th>
+                  <th>hair_color</th>
+                  <th>height</th>
+                  <th>mass</th>
+                  <th>skin_color</th>
+                  <th>homeworld</th>
+                  <th>films</th>
+                  <th>species</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr *ngFor="let personaje of criterioPersonajes">
+                  <td>{{personaje.name}}</td> 
+                  <td>{{personaje.birth_year}}</td>
+                  <td>{{personaje.eye_color}}</td>
+                  <td>{{personaje.ender}}</td>
+                  <td>{{personaje.hair_color}}</td>
+                  <td>{{personaje.height}}</td>
+                  <td>{{personaje.mass}}</td>
+                  <td>{{personaje.skin_color}}</td>
+                  <td>{{personaje.homeworld}}</td>
+                  <td>{{personaje.films}}</td>
+                  <td>{{personaje.species}}</td>
+                </tr>
+              </tbody>
+          </table>
+          </div>
+
+

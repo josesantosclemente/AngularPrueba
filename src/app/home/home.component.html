@@ -1,0 +1,25 @@
+
+<h1>Personajes Star Wars</h1> 
+<div class="box box-info">
+  <mat-paginator [length] = "50" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" 
+(page)="handlePage($event)">
+</mat-paginator>
+  <table class="table no-margin">
+    <thead>
+      <tr>
+        <th class="text-warning">Nombre</th>
+        <th>Masa</th>
+        <th>Altura</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let personaje of allPersonajes | paginate:page_size:page_number">
+        <td>{{personaje.name}}</td>
+        <td>{{personaje.mass}}</td>
+        <td>{{personaje.height}}</td>
+      </tr>
+    </tbody>
+</table>
+
+</div>
